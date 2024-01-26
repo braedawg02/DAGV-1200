@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Table.ma
-//Last modified: Fri, Jan 26, 2024 04:09:00 PM
+//Last modified: Fri, Jan 26, 2024 04:12:57 PM
 //Codeset: UTF-8
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -12,20 +12,21 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Mac OS X 14.2.1";
-fileInfo "UUID" "906BA821-BD48-EAE8-A059-4B8253226FBC";
+fileInfo "UUID" "8519FB73-4248-0324-FF5B-68BB9726744E";
 createNode transform -s -n "persp";
 	rename -uid "39D538F7-8848-22CC-EB5D-56BAAE28FE8E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.2516868834321411 4.1525812966202231 13.556946877562066 ;
-	setAttr ".r" -type "double3" -18.338352730185356 1802.5999999990863 -4.9747378351939701e-17 ;
+	setAttr ".t" -type "double3" -5.2845125617817779 8.1665591334046894 7.5470660814494845 ;
+	setAttr ".r" -type "double3" -36.338352730185775 1764.9999999990625 -1.9413701666707133e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1001DA0E-F24F-19BD-020B-FC8F53781002";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 14.173303062653524;
+	setAttr ".coi" 11.437495420527357;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".tp" -type "double3" 0 1.3892424046993255 0 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "1796B1B2-6148-0723-FF1D-8E9CC428478F";
@@ -577,9 +578,6 @@ createNode groupId -n "groupId16";
 createNode groupId -n "groupId17";
 	rename -uid "7473590E-A84C-263C-8508-E6BF1C630D4C";
 	setAttr ".ihi" 0;
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "C6C76A03-FC4F-3390-E2C0-CFB701253294";
-	setAttr ".sst" -type "string" "";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "6F1AA043-2440-1561-80BD-808B491BEB20";
 	setAttr ".b" -type "string" (
@@ -627,6 +625,9 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "18F4B0CE-4F42-4B7F-B942-55AE146CB5D6";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "ABAA924A-3149-B76C-F323-B799A098F682";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
