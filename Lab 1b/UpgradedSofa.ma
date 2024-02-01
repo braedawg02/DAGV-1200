@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
-//Name: Sofa.ma
-//Last modified: Wed, Jan 31, 2024 11:03:51 PM
+//Name: UpgradedSofa.ma
+//Last modified: Wed, Jan 31, 2024 11:04:06 PM
 //Codeset: UTF-8
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Mac OS X 14.2.1";
-fileInfo "UUID" "BAF9457D-D74F-95F5-9AE3-F9B7A4797162";
+fileInfo "UUID" "56E80A16-A445-E50B-AF71-648EA6BFBA35";
 createNode transform -s -n "persp";
 	rename -uid "F3124E9D-9A45-A790-7A3E-7F9983294B38";
 	setAttr ".v" no;
@@ -2529,7 +2529,7 @@ createNode polyTweak -n "polyTweak25";
 	setAttr ".tk[15]" -type "float3" 0.00047016889 -5.4284523e-05 9.5367432e-07 ;
 	setAttr ".tk[16]" -type "float3" 0.00047016516 -5.4284581e-05 -3.3378601e-06 ;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "9A49A988-6B48-B3A5-84A4-BDB1576C352D";
+	rename -uid "2A9CD268-6342-53FE-64DD-C7921C70202F";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
@@ -2794,4 +2794,4 @@ connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId4.msg" ":initialShadingGroup.gn" -na;
-// End of Sofa.ma
+// End of UpgradedSofa.ma
